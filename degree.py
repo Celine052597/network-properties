@@ -26,6 +26,14 @@ def degreedist(g):
 	# Generate a DF with degree,count
     # YOUR CODE HERE
 
+def findDegree(G, ver):
+    degree = 0
+    for i in range(G.v):
+        if G.diri[ver][i] == 1:
+            degree += 1
+    if G.diri[ver][ver] == 1: 
+        degree += 1
+    return degree
 
 ''' Read in an edgelist file with lines of the format id1<delim>id2
 	and return a corresponding graphframe. If "large" we assume
