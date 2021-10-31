@@ -21,6 +21,14 @@ def closeness(g):
 
 	# Get the inverses and generate desired dataframe.
 
+import matplotlib.pyplot as plt
+import networkx as nx
+  
+G = nx.karate_club_graph()
+  
+plt.figure(figsize =(15, 15))
+nx.draw_networkx(g, with_labels = True)
+deg_centrality = nx.degree_centrality(G)
 
 print("Reading in graph for problem 2.")
 graph = sc.parallelize([('A','B'),('A','C'),('A','D'),
